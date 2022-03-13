@@ -25,3 +25,5 @@ Purchase the main resource: https://pterodactyl-resources.com/resources/resource
 
 **YOU WILL NEED TO CHANGE THE EMAIL THAT THE MONEY IS SENT TO!!**
 YOU CAN DO THIS IN THE index.php file in the main directory by making your own developer token and replacing it with the one that's in there right now!
+
+The file in IMPORTANT/PayPal.php was created by mubeen!
