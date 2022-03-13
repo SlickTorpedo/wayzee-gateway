@@ -17,7 +17,7 @@ For help, contact Slick#7454 on discord :)
 
 All credit for the billing module goes to Mubeen 
 
-https://discord.gg/r6RBCuwn55
-https://pterodactyl-resources.com/resources/resource/13-billing-module-pterodacyl-17x--all-in-one-billing-system-/
+Join their discord: https://discord.gg/r6RBCuwn55
+Purchase the addon: https://pterodactyl-resources.com/resources/resource/13-billing-module-pterodacyl-17x--all-in-one-billing-system-/
 
 This is just an addon for some people having some issues
