@@ -22,3 +22,6 @@ Join their discord: https://discord.gg/r6RBCuwn55
 This is just an addon for some people having some issues
 
 Purchase the main resource: https://pterodactyl-resources.com/resources/resource/13-billing-module-pterodacyl-17x--all-in-one-billing-system-/
+
+**YOU WILL NEED TO CHANGE THE EMAIL THAT THE MONEY IS SENT TO!!**
+YOU CAN DO THIS IN THE index.php file in the main directory by making your own developer token and replacing it with the one that's in there right now!
