@@ -9,7 +9,7 @@ Please credit me if you use this, I'd appreciate it. The code is all open source
 
 **IMPORTANT!!** There is sections that require you to input SQL data. I've set the credentials to default stuff but you will need to change this. It's the credentials for the database that hosts your pterodactyl panel!
 
-ALL THE FILES IN THIS MAIN DIRECTORY NEED TO BE PLACED IN A FOLDER CALLED "payment-test"
+ALL THE FILES SHOULD BE CORRECT. You will need to create directorys on your server that match the ones in this repository minus the IMPORTANT one, that one just tells you to edit your PayPal.php file.
 
 IF YOU WANT TO CHANGE THAT, YOU WILL NEED TO MODIFY CEARTAIN FILES
 
