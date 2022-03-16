@@ -27,3 +27,5 @@ Purchase the main resource: https://pterodactyl-resources.com/resources/resource
 YOU CAN DO THIS IN THE index.php file in the main directory by making your own developer token and replacing it with the one that's in there right now!
 
 The file in IMPORTANT/PayPal.php was created & coded by mubeen!
+
+You will need a buisness account for this to work. You can find your application ID at https://developer.paypal.com/developer/applications/
