@@ -1,5 +1,7 @@
 The token file will generate itself automatically don't worry!
 
+The check-balance part is optional! It's just for people to check their account balance!
+You will need to go to https://yoursite.com/setup in order to run the setup script! It will not work without it!
 
 I WILL NOT BE RESOLVING ISSUES ON HERE THIS IS PURELY FOR DEVELOPMENT WORK -- IF YOU CREATE AN ISSUE I MAY GET AROUND TO IT BUT IT'S NOT GUARENTEED
 
