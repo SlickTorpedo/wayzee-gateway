@@ -86,7 +86,7 @@
               <input type="text" name="tokenurl"><br><br>
               <input type="submit">
               </form>
-            <br><a href="https://nexussociety.net/">(How to get this)</a>
+            <br><a href="https://youtu.be/MxYnR4qzUQI">(How to get this)</a>
             </p>
           </div>
         </div>
