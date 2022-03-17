@@ -85,8 +85,8 @@
               Please enter your Site Name.
             </h5>
             <p>
-              <form action="sitename" method="get">
-              <input type="text" name="email"><br><br>
+              <form action="setup1" method="get">
+              <input type="text" name="sitename"><br><br>
               <input type="submit">
               </form>
             </p>
