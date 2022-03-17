@@ -2,9 +2,6 @@
 <html>
 
 <head>
-  <?php
-    $id = htmlspecialchars($_GET['id']);
-  ?>
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -82,7 +79,7 @@
           </div>
           <div class="detail-box">
             <h5>
-              Please enter your Site Name.
+              Please enter your
             </h5>
             <p>
               <form action="setup1" method="get">
@@ -133,7 +130,6 @@ $txt = "Name: $sitename\n";
 $myfile = fopen("config.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
-echo "Your Config File is now located at: https://yoursite.com/dev/setup1/config.txt";
 ?>
 
 </html>
