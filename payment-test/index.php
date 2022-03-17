@@ -16,9 +16,9 @@
   <meta name="author" content="" />
 
   <?php
-  $filepath = 'sitename.txt';
+  $filepathsitename = 'sitename.txt';
   
-  if (file_exists($filepath)) {
+  if (file_exists($filepathsitename)) {
 	$sitename = file_get_contents('/setup/setup1/sitename.txt');
   } else {
     $sitename = "RUN INSTALLATION!";
