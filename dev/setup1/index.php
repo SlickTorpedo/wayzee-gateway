@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Setup Page - Payment Gateway</title>
+  <title>Setup Page</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -127,7 +127,7 @@ $sitename = htmlspecialchars($_GET['sitename']);
 
 $txt = "Name: $sitename\n";
 
-$myfile = fopen("config.txt", "w") or die("Unable to open / generate config file!");
+$myfile = fopen("/paymentconfigs/sitename.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
 ?>
