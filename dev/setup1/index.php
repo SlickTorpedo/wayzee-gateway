@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+  
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -124,6 +124,13 @@
 
 <?php
 
+$filepath = 'sitename.txt';
+  
+if (file_exists($filepath)) {
+  echo "Your sitename.txt file already exists! The existing changes won't be saved! If you want to save them, delete sitename.txt in the https://yoursite.com/setup1/ directory!";
+  die();
+}
+
 $sitename = htmlspecialchars($_GET['sitename']);
 
 $txt = $sitename;
@@ -131,6 +138,7 @@ $txt = $sitename;
 $myfile = fopen("sitename.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
+echo "Saved Config";
 ?>
 
 </html>
