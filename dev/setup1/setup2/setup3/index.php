@@ -67,7 +67,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Site Name
+          Homepage
         </h2>
       </div>
 
@@ -82,8 +82,8 @@
               Please enter your home page
             </h5>
             <p>
-              <form action="setup3" method="get">
-              <input type="text" name="paypaltoken"><br><br>
+              <form action="setup4" method="get">
+              <input type="text" name="homepage"><br><br>
               <input type="submit">
               </form>
             <br>If you're using the portal as your main<br>homepage, just use https://panel.yoursite.com
