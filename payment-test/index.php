@@ -24,7 +24,7 @@
     $sitename = "RUN INSTALLATION!";
   }
   ?>
-  <title><?php> echo $sitename; ?> - Purchase</title>
+  <title><?php echo $sitename; ?> - Purchase</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
