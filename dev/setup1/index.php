@@ -127,7 +127,7 @@ $sitename = htmlspecialchars($_GET['sitename']);
 
 $txt = "Name: $sitename\n";
 
-$myfile = fopen("/paymentconfigs/sitename.txt", "w") or die("Unable to open / generate config file!");
+$myfile = fopen("https://nexussociety.net/paymentconfigs/sitename.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
 ?>
