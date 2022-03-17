@@ -67,7 +67,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Site Name
+          Token
         </h2>
       </div>
 
