@@ -133,7 +133,7 @@ $txt = "Name: $sitename\n";
 $myfile = fopen("config.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
-echo "Your Config File is now located at https://yoursite.com/dev/setup1/config.txt";
+echo "Your Config File is now located at: https://yoursite.com/dev/setup1/config.txt";
 ?>
 
 </html>
