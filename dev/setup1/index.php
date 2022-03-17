@@ -116,8 +116,8 @@
 
 
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://nexussociety.net/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://nexussociety.net/js/bootstrap.js"></script>
 
 </body>
 
@@ -127,7 +127,7 @@ $sitename = htmlspecialchars($_GET['sitename']);
 
 $txt = "Name: $sitename\n";
 
-$myfile = fopen("https://nexussociety.net/paymentconfigs/sitename.txt", "w") or die("Unable to open / generate config file!");
+$myfile = fopen("sitename.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
 ?>
