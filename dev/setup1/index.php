@@ -86,7 +86,7 @@
               <input type="text" name="panelurl"><br><br>
               <input type="submit">
               </form>
-            Example: <br>https://panel.nexussociety.net
+            <br>Example: <br>https://panel.nexussociety.net
             </p>
           </div>
         </div>
