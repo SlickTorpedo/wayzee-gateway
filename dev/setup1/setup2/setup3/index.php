@@ -124,10 +124,10 @@
 
 <?php
 
-$filepath = 'paypaltoken.txt';
+$filepath = 'homepage.txt';
   
 if (file_exists($filepath)) {
-  echo "Your paypaltoken.txt file already exists! The existing changes won't be saved! If you want to save them, delete paypaltoken.txt in the https://yoursite.com/setup1/setup2/setup3 directory!";
+  echo "Your homepage.txt file already exists! The existing changes won't be saved! If you want to save them, delete homepage.txt in the https://yoursite.com/setup1/setup2/setup3 directory!";
   die();
 }
 
@@ -135,7 +135,7 @@ $panelurl = htmlspecialchars($_GET['paypaltoken']);
 
 $txt = $panelurl;
 
-$myfile = fopen("paypaltoken.txt", "w") or die("Unable to open / generate config file!");
+$myfile = fopen("homepage.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
 ?>
