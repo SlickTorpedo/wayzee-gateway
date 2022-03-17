@@ -15,7 +15,16 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Nexus Hosting - Purchase</title>
+  <?php
+  $filepath = 'sitename.txt';
+  
+  if (file_exists($filepath)) {
+	$sitename = file_get_contents('/setup/setup1/sitename.txt');
+  } else {
+    $sitename = "RUN INSTALLATION!";
+  }
+  ?>
+  <title><?php> echo $sitename;?> - Purchase</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
