@@ -79,11 +79,11 @@
           </div>
           <div class="detail-box">
             <h5>
-              Please enter your
+              Please enter your Panel URL<br> Ex: https://panel.nexussociety.net
             </h5>
             <p>
-              <form action="setup1" method="get">
-              <input type="text" name="sitename"><br><br>
+              <form action="setup2" method="get">
+              <input type="text" name="panelurl"><br><br>
               <input type="submit">
               </form>
             </p>
