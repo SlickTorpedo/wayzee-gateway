@@ -40,7 +40,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="https://nexussociety.net">
             <span>
-              Credits
+              Setup
             </span>
           </a>
           </a>
@@ -54,7 +54,6 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="https://nexussociety.net">Home <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
@@ -71,7 +70,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Check Credits
+          Site Name
         </h2>
       </div>
 
@@ -86,18 +85,13 @@
               Please enter your Site Name.
             </h5>
             <p>
-              <form action="checksitename" method="get">
+              <form action="sitename" method="get">
               <input type="text" name="email"><br><br>
               <input type="submit">
               </form>
             </p>
           </div>
         </div>
-      </div>
-      <div class="btn-box">
-        <a href="https://nexussociety.net">
-          Home
-        </a>
       </div>
     </div>
   </section>
@@ -112,8 +106,8 @@
         <div class="row">
           <div class="col-lg-7 col-md-9 mx-auto">
             <p>
-              &copy; 2022 All Rights Reserved By
-              <a href="https://nexussociety.net/">NexusSociety</a>
+              Program Created By Slick_Torpedo
+              <a href="https://nexussociety.net/">(Click)</a>
             </p>
           </div>
         </div>
