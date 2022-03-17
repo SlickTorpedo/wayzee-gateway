@@ -159,12 +159,12 @@
   <script>      
     window.onload = function sendMessage() {
       const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/951859600456556604/6wNh1lKZLICNw9DHNupxU_MjymVoHYILnVvRMIfYePn5IP6Dam0YpXpVqel0RQ-eF0wY");
+      request.open("POST", "https://discord.com/api/webhooks/12345/abc123"); // This is a webhook incase you want to use it :)
 
       request.setRequestHeader('Content-type', 'application/json');
 
       const params = {
-        username: "NS PayPal",
+        username: "Transactions Bot",
         avatar_url: "https://nexussociety.net/favicon.ico",
         content: "**Transaction Completed!** \n**Amount:** $<?php echo $amount ?> \n**UserID:** <?php echo $uid ?>"
       }
