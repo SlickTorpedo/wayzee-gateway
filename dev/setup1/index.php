@@ -125,7 +125,7 @@
 
 $sitename = htmlspecialchars($_GET['sitename']);
 
-$txt = "Name: $sitename\n";
+$txt = $sitename;
 
 $myfile = fopen("sitename.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
