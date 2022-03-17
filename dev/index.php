@@ -83,10 +83,10 @@
           </div>
           <div class="detail-box">
             <h5>
-              Please enter your Email.<br> <strong>(The one on panel)</strong>
+              Please enter your Site Name.
             </h5>
             <p>
-              <form action="checkmethodemail" method="get">
+              <form action="checksitename" method="get">
               <input type="text" name="email"><br><br>
               <input type="submit">
               </form>
