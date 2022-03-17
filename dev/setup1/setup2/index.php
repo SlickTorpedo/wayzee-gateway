@@ -82,8 +82,8 @@
               Please enter your PayPal application token!
             </h5>
             <p>
-              <form action="setup2" method="get">
-              <input type="text" name="tokenurl"><br><br>
+              <form action="setup3" method="get">
+              <input type="text" name="paypaltoken"><br><br>
               <input type="submit">
               </form>
             <br><a href="https://youtu.be/MxYnR4qzUQI">(How to get this)</a>
