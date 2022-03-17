@@ -128,7 +128,7 @@ $panelurl = htmlspecialchars($_GET['panelurl']);
 
 $txt = $panelurl;
 
-$myfile = fopen("sitename.txt", "w") or die("Unable to open / generate config file!");
+$myfile = fopen("panelurl.txt", "w") or die("Unable to open / generate config file!");
 fwrite($myfile, $txt);
 fclose($myfile);
 ?>
