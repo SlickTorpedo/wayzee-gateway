@@ -74,8 +74,8 @@
       <div class="service_container">
         <div class="box active">
           <div class="img-box">
-            <img src="https://nexussociety.net/payment-test/imhg/warn.png" class="img1" alt="">
-            <img src="https://nexussociety.net/payment-test/imhg/warn.png" class="img2" alt="">
+            <img src="https://nexussociety.net/images/check.png" class="img1" alt="">
+            <img src="https://nexussociety.net/images/check.png" class="img2" alt="">
           </div>
           <div class="detail-box">
             <h5>
