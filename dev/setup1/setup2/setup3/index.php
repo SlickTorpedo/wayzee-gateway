@@ -124,6 +124,13 @@
 
 <?php
 
+$filepath = 'paypaltoken.txt';
+  
+if (file_exists($filepath)) {
+  echo "Your paypaltoken.txt file already exists! The existing changes won't be saved! If you want to save them, delete paypaltoken.txt in the https://yoursite.com/setup1/setup2/setup3 directory!";
+  die();
+}
+
 $panelurl = htmlspecialchars($_GET['paypaltoken']);
 
 $txt = $panelurl;
