@@ -124,6 +124,13 @@
 
 <?php
 
+$filepath = 'panelurl.txt';
+  
+if (file_exists($filepath)) {
+  echo "Your panelurl.txt file already exists! The existing changes won't be saved! If you want to save them, delete panelurl.txt in the https://yoursite.com/setup1/setup2 directory!";
+  die();
+}
+
 $panelurl = htmlspecialchars($_GET['panelurl']);
 
 $txt = $panelurl;
