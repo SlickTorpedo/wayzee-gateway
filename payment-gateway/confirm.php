@@ -5,13 +5,13 @@
   <?php
   $siteurl = $_SERVER['HTTP_HOST'];
   
-  $sitenamecurl = "http://$siteurl/setup/setup1/sitename.txt";
+  $sitenamecurl = "https://$siteurl/setup/setup1/sitename.txt";
   
-  $panelurlcurl = "http://$siteurl/setup/setup1/setup2/panelurl.txt";
+  $panelurlcurl = "https://$siteurl/setup/setup1/setup2/panelurl.txt";
   
-  $homeurlcurl = "http://$siteurl/setup/setup1/setup2/setup3/setup4/panelurl.txt";
+  $homeurlcurl = "https://$siteurl/setup/setup1/setup2/setup3/setup4/panelurl.txt";
   
-  $paypaltokencurl = "http://$siteurl/setup/setup1/setup2/setup3/paypaltoken.txt";
+  $paypaltokencurl = "https://$siteurl/setup/setup1/setup2/setup3/paypaltoken.txt";
   
   
   $ci = curl_init();
