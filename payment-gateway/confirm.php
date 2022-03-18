@@ -3,7 +3,66 @@
 
 <head>
   <?php
-    $id = htmlspecialchars($_GET['id']);
+  $siteurl = $_SERVER['HTTP_HOST'];
+  
+  $sitenamecurl = "http://$siteurl/setup/setup1/sitename.txt";
+  
+  $panelurlcurl = "http://$siteurl/setup/setup1/setup2/panelurl.txt";
+  
+  $homeurlcurl = "http://$siteurl/setup/setup1/setup2/setup3/setup4/panelurl.txt";
+  
+  $paypaltokencurl = "http://$siteurl/setup/setup1/setup2/setup3/paypaltoken.txt";
+  
+  
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $sitenamecurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $sitename = curl_exec($ci);
+  curl_close($ci);
+  
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $panelurlcurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $panelurl = curl_exec($ci);
+  curl_close($ci);
+  
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $homeurlcurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $homeurl = curl_exec($ci);
+  curl_close($ci);
+  
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $paypaltokencurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $paypaltoken = curl_exec($ci);
+  curl_close($ci);
+  
+  if (isset($sitename)) {
+    $sitename = $sitename;
+  } else {
+    $sitename = "RUN INSTALLATION!";
+  }
+  
+  if (isset($homeurl)) {
+    $homeurl = $homeurl;
+  } else {
+    $homeurl = "RUN INSTALLATION!";
+  }
+  
+  if (isset($paypaltoken)) {
+    $paypaltoken = $paypaltoken;
+  } else {
+    $paypaltoken = "RUN INSTALLATION!";
+  }
+  
+  if (isset($panelurl)) {
+    $panelurl = $panelurl;
+  } else {
+    $panelurl = "RUN INSTALLATION!";
+  }
+  
+  $id = htmlspecialchars($_GET['id']);
   ?>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -15,7 +74,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Nexus Hosting - Payment Confirmed</title>
+  <title><?php echo $sitename; ?> - Payment Confirmed</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -38,7 +97,7 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="https://nexussociety.net">
+          <a class="navbar-brand" href="<?php echo "$homeurl"; ?>">
             <span>
               Payment Confirmed
             </span>
@@ -54,7 +113,7 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="https://nexussociety.net">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?php echo "$homeurl"; ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
@@ -100,7 +159,7 @@
               Oh crap... undo that please!
             </h5>
             <p>
-              If you accidentally made a purchase that you didn't mean to or changed your mind, you can always contact our support team! Just click <a href="https://nexussociety.net/support">this link</a> and we will take you there!
+              If you accidentally made a purchase that you didn't mean to or changed your mind, you can always contact our support team! Just click <a href="<?php echo "$homeurl/support"; ?>">this link</a> and we will take you there!
             </p>
           </div>
         </div>
@@ -114,13 +173,13 @@
               How much are these credits worth?
             </h5>
             <p>
-              For every single credit you buy, you purchase $1 worth of USD. You can view your credits by clicking <a href="https://nexussociety.net/check-balance">here</a>.
+              For every single credit you buy, you purchase $1 worth of USD. You can view your credits by clicking <a href="<?php echo "$homeurl/check-balance"; ?>">here</a>.
             </p>
           </div>
         </div>
       </div>
       <div class="btn-box">
-        <a href="https://panel.nexussociety.net/billing/balance">
+        <a href="<?php echo "$panelurl/billing/balance"; ?>">
           WANT... MORE... CREDITS!
         </a>
       </div>
@@ -138,7 +197,7 @@
           <div class="col-lg-7 col-md-9 mx-auto">
             <p>
               &copy; 2022 All Rights Reserved By
-              <a href="https://nexussociety.net/">NexusSociety</a>
+              <a href="<?php echo "$homeurl"; ?>"><?php echo $sitename; ?></a>
             </p>
           </div>
         </div>
@@ -156,22 +215,6 @@
   $amount = htmlspecialchars($_GET['amountpaid']);
   $uid = htmlspecialchars($_GET['userid']);
   ?>
-  <script>      
-    window.onload = function sendMessage() {
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/12345/abc123"); // This is a webhook incase you want to use it :) It's got to be here because the PayPal page is stupid and won't let you put scripts :,(
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      const params = {
-        username: "Transactions Bot",
-        avatar_url: "https://nexussociety.net/favicon.ico",
-        content: "**Transaction Completed!** \n**Amount:** $<?php echo $amount ?> \n**UserID:** <?php echo $uid ?>"
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
 
 </body>
 
