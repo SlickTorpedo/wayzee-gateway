@@ -1,9 +1,9 @@
 **WANT TO INSTALL IT EASIER?**
-If you want to install it with the check-balance addon:</br>
-``wget https://nexussociety.net/curlrequests/includes.CONTAINS.zip``
+If you want to install it with the check-balance addon:</br></br>
+``wget https://nexussociety.net/curlrequests/includes.CONTAINS.zip``</br>
 
-If you want to install it without the check-balance addon:</br>
-``wget https://nexussociety.net/curlrequests/includes.EXCLUDES.zip``
+If you want to install it without the check-balance addon:</br></br>
+``wget https://nexussociety.net/curlrequests/includes.EXCLUDES.zip``</br>
 
 #
 Then just go to https://yoursite.com/setup and it will run the setup script!
