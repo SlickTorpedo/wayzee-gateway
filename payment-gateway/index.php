@@ -35,7 +35,19 @@
   <?php
   $siteurl = $_SERVER['HTTP_HOST'];
   
-  $sitename = file_get_contents("http://$siteurl/setup/setup1/sitename.txt");
+  $siteurlcurl = "http://$siteurl/setup/setup1/sitename.txt";
+  
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $siteurlcurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $cont = curl_exec($ci);
+  curl_close($ci);
+  
+  echo $cont;
+  
+  $sitename = $cont;
+  
+  //$sitename = file_get_contents("http://$siteurl/setup/setup1/sitename.txt");
   
   $panelurl = file_get_contents("http://$siteurl/setup/setup1/setup2/panelurl.txt");
   
