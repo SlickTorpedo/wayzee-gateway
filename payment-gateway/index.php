@@ -203,7 +203,7 @@
 					fwrite($myfile, $txt);
 					fclose($myfile);
   					?>
-           			actions.redirect('https://nexussociety.net/payment-gateway/redirecting.php?id=<?php echo htmlspecialchars($_GET['uid']); ?>&varamt=<?php echo $nsrandvar ?>&privkey=<?php echo $txt ?>');
+           			actions.redirect('<?php echo "$homeurl"; ?>/payment-gateway/redirecting.php?id=<?php echo htmlspecialchars($_GET['uid']); ?>&varamt=<?php echo $nsrandvar ?>&privkey=<?php echo $txt ?>');
             		//location.href = 'https://nexussociety.net/payment-test/confirm.php?id= + transaction.id';
           		});
         		}
