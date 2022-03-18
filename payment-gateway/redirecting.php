@@ -50,5 +50,5 @@ function remove_line($file, $remove) {
   
   
 <?php
-header("Location: $siteurl/payment-test/confirm.php?amountpaid=$amount&userid=$uid");
+header("Location: $siteurl/payment-gateway/confirm.php?amountpaid=$amount&userid=$uid");
 ?>
