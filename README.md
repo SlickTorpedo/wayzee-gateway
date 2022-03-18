@@ -5,7 +5,7 @@ You will need to go to https://yoursite.com/setup in order to run the setup scri
 
 Please credit me if you use this, I'd appreciate it. The code is all open source though you may fork this or edit this as you wish and use it for yourself.
 
-**IMPORTANT!!** There is sections that require you to input SQL data. I cannot include this in the install script because of security vulnerablities! I've set the credentials to default stuff but you will need to change this. It's the credentials for the database that hosts your pterodactyl panel! All the things that must be changed are in /payment-test and if you're using it, in /check-balance. If you have not specified the SQL information, you will get errors when trying to complete the payments!
+**IMPORTANT!!** There is sections that require you to input SQL data. I cannot include this in the install script because of security vulnerablities! I've set the credentials to default stuff but you will need to change this. It's the credentials for the database that hosts your pterodactyl panel! All the things that must be changed are in /payment-gateway/redirecting.php and if you're using it, in /check-balance. If you have not specified the SQL information, you will get errors when trying to complete the payments!
 
 ALL THE FILES SHOULD BE CORRECT. You will need to create directorys on your server that match the ones in this repository minus the IMPORTANT one, that one just tells you to edit your PayPal.php file.
 
