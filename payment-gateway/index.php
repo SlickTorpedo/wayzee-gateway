@@ -61,6 +61,8 @@
   } else {
     $panelurl = "RUN INSTALLATION!";
   }
+  
+  $id = htmlspecialchars($_GET['id']);
   ?>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -72,24 +74,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <?php
-  	$checkvarid = htmlspecialchars($_GET['uid']);
-	$checkvaramount = htmlspecialchars($_GET['amount']);
-  	$checkvaramount = $checkvaramount - 1;
-  
-  	if ($checkvarid > 0) {
-    	$checkvarid = $checkvarid;
-  	} else {
-    	header("Location: $panelurl/billing/balance");
-    }
-
-	if ($checkvaramount >= 1) {
-    	$checkvaramount = $checkvaramount;
-  	} else {
-    	header("Location: $panelurl/billing/balance");
-    }
-  ?>
-  <title><?php echo $sitename; ?> - Purchase</title>
+  <title><?php echo $sitename; ?> - Payment Confirmed</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -114,7 +99,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="<?php echo "$homeurl"; ?>">
             <span>
-              Purchase Credits
+              Payment Confirmed
             </span>
           </a>
           </a>
@@ -145,73 +130,61 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Choose your payment method
+          PURCHASE SUCCESSFUL!<br><em>You're amazing thank you :)</em>
         </h2>
       </div>
 
       <div class="service_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="https://nexussociety.net/payment-test/imhg/question-mark.png" class="img1" alt="">
+            <img src="https://nexussociety.net/payment-test/imhg/question-mark.png" class="img2" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              What did I just buy?
+            </h5>
+            <p>
+              When you purchase account credits you are adding them to your account balance. You can now use these credits to purchase servers!
+            </p>
+          </div>
+        </div>
         <div class="box active">
-          <?php
-    		$amount = htmlspecialchars($_GET['amount']);
-    		if ($amount >=0)
-    		{
-      		$amount = $amount - 1;
-    		} else {
-      		$amount = 1;
-    		}
-          	$nsrandvar = $amount + 5318;
-			?>
-          	<input type="hidden" id="myText" value="<?php echo $amount ?>">
-          Purchasing <strong><?php echo $amount ?></strong> Account Credits<br><br>
-    		<!-- Include the PayPal JavaScript SDK; replace "test" with your own sandbox Business account app client ID -->
-    		<script src="https://www.paypal.com/sdk/js?client-id=<?php echo "$paypaltoken"; ?>&currency=USD"></script>
-
-    		<!-- Set up a container element for the button -->
-    		<div id="paypal-button-container"></div>
-
-    		<script>
-      		function myFunction() {
- 				var x = document.getElementById("myText").value;
-        		return x;
-	  		}
-      
-      		paypal.Buttons({
-        		// Sets up the transaction when a payment button is clicked
-        		createOrder: function(data, actions) {
-          		return actions.order.create({
-            		purchase_units: [{
-              		amount: {
-                		value: myFunction() // Can reference variables or functions. Example: `value: document.getElementById('...').value`
-              		}
-            		}]
-          		});
-        		},
-
-        		// Finalize the transaction after payer approval
-        		onApprove: function(data, actions) {
-          		return actions.order.capture().then(function(orderData) {
-            		var element = document.getElementById('paypal-button-container');
-            		//element.innerHTML = '';
-            		//element.innerHTML = '<h3>Payment successful. Redirecting now!</h3>';
-                  	<?php
-					function generateRandomString($length = 50) {
-    					return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
-					}
-
-					$myfile = fopen("protectedintfilekey.txt", "w") or die("Unable to open file!");
-					$txt = generateRandomString();
-					fwrite($myfile, $txt);
-					fclose($myfile);
-  					?>
-           			actions.redirect('<?php echo "$homeurl"; ?>/payment-gateway/redirecting.php?id=<?php echo htmlspecialchars($_GET['uid']); ?>&varamt=<?php echo $nsrandvar ?>&privkey=<?php echo $txt ?>');
-            		//location.href = 'https://nexussociety.net/payment-test/confirm.php?id= + transaction.id';
-          		});
-        		}
-      		}).render('#paypal-button-container');
-
-    		</script>
-    		</div>
-  		</section>
+          <div class="img-box">
+            <img src="https://nexussociety.net/payment-test/imhg/warn.png" class="img1" alt="">
+            <img src="https://nexussociety.net/payment-test/imhg/warn.png" class="img2" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Oh crap... undo that please!
+            </h5>
+            <p>
+              If you accidentally made a purchase that you didn't mean to or changed your mind, you can always contact our support team! Just click <a href="<?php echo "$homeurl/support"; ?>">this link</a> and we will take you there!
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="https://nexussociety.net/payment-test/imhg/money-bag.png" class="img1" alt="">
+            <img src="https://nexussociety.net/payment-test/imhg/money-bag.png" class="img2" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              How much are these credits worth?
+            </h5>
+            <p>
+              For every single credit you buy, you purchase $1 worth of USD. You can view your credits by clicking <a href="<?php echo "$homeurl/check-balance"; ?>">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="<?php echo "$panelurl/billing/balance"; ?>">
+          WANT... MORE... CREDITS!
+        </a>
+      </div>
+    </div>
+  </section>
   <!-- end service section -->
 
   <div class="footer_bg">
@@ -236,8 +209,12 @@
 
 
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://nexussociety.net/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://nexussociety.net/js/bootstrap.js"></script>
+  <?php
+  $amount = htmlspecialchars($_GET['amountpaid']);
+  $uid = htmlspecialchars($_GET['userid']);
+  ?>
 
 </body>
 
