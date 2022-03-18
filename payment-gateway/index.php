@@ -14,6 +14,12 @@
   	} else {
     	header("Location: $panelurlc/billing/balance");
     }
+
+	if ($checkvaramount >= 1) {
+    	$checkvaramount = $checkvaramount;
+  	} else {
+    	$cancelpayment = "true";
+    }
   ?>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -52,6 +58,12 @@
     $paypaltoken = $paypaltoken;
   } else {
     $paypaltoken = "RUN INSTALLATION!";
+  }
+  
+  if (isset($panelurl)) {
+    $panelurl = $panelurl;
+  } else {
+    $panelurl = "RUN INSTALLATION!";
   }
   ?>
   <title><?php echo $sitename; ?> - Purchase</title>
