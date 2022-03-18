@@ -8,6 +8,7 @@
     //the c variables mean check, it's just so i can check to make sure the URL is valid and not modified!
   	$checkvarid = htmlspecialchars($_GET['uid']);
 	$checkvaramount = htmlspecialchars($_GET['amount']);
+  	$checkvaramount = $checkvaramount - 1;
   
   	if ($checkvarid > 0) {
     	$checkvarid = $checkvarid;
