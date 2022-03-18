@@ -18,7 +18,7 @@
 	if ($checkvaramount >= 1) {
     	$checkvaramount = $checkvaramount;
   	} else {
-    	$cancelpayment = "true";
+    	header("Location: $panelurlc/billing/balance");
     }
   ?>
   <!-- Basic -->
