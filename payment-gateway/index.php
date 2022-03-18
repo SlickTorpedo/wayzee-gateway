@@ -80,13 +80,13 @@
   	if ($checkvarid > 0) {
     	$checkvarid = $checkvarid;
   	} else {
-    	header("Location: $panelurlc/billing/balance");
+    	header("Location: $panelurl/billing/balance");
     }
 
 	if ($checkvaramount >= 1) {
     	$checkvaramount = $checkvaramount;
   	} else {
-    	header("Location: $panelurlc/billing/balance");
+    	header("Location: $panelurl/billing/balance");
     }
   ?>
   <title><?php echo $sitename; ?> - Purchase</title>
