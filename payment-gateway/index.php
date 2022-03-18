@@ -5,7 +5,7 @@
   <?php
   $siteurl = $_SERVER['HTTP_HOST'];
   
-  $siteurlcurl = "http://$siteurl/setup/setup1/sitename.txt";
+  $sitenamecurl = "http://$siteurl/setup/setup1/sitename.txt";
   
   $panelurlcurl = "http://$siteurl/setup/setup1/setup2/panelurl.txt";
   
@@ -13,7 +13,6 @@
   
   $paypaltokencurl = "http://$siteurl/setup/setup1/setup2/setup3/paypaltoken.txt";
   
-  $sitenamecurl = "http://$siteurl/setup/setup1/sitename.txt";
   
   $ci = curl_init();
   curl_setopt($ci, CURLOPT_URL, $sitenamecurl);
