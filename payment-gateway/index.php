@@ -177,7 +177,7 @@
           <div class="col-lg-7 col-md-9 mx-auto">
             <p>
               &copy; 2022 All Rights Reserved By
-              <a href="https://nexussociety.net/"><?php echo $sitename; ?></a>
+              <a href="<?php echo "$homeurl"; ?>"><?php echo $sitename; ?></a>
             </p>
           </div>
         </div>
