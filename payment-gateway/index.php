@@ -3,7 +3,17 @@
 
 <head>
   <?php
-    $nsvar = htmlspecialchars($_GET['id']);
+  	$siteurlc = $_SERVER['HTTP_HOST'];
+  	$panelurlc = file_get_contents("http://$siteurlc/setup/setup1/setup2/panelurl.txt");
+    //the c variables mean check, it's just so i can check to make sure the URL is valid and not modified!
+  	$checkvarid = htmlspecialchars($_GET['uid']);
+	$checkvaramount = htmlspecialchars($_GET['amount']);
+  
+  	if ($checkvarid > 0) {
+    	$checkvarid = $checkvarid;
+  	} else {
+    	header("Location: $panelurlc/billing/balance");
+    }
   ?>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -19,6 +29,8 @@
   $siteurl = $_SERVER['HTTP_HOST'];
   
   $sitename = file_get_contents("http://$siteurl/setup/setup1/sitename.txt");
+  
+  $panelurl = file_get_contents("http://$siteurl/setup/setup1/setup2/panelurl.txt");
   
   $homeurl = file_get_contents("http://$siteurl/setup/setup1/setup2/setup3/setup4/panelurl.txt");
   
