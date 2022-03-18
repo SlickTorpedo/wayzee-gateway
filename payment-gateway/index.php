@@ -3,57 +3,41 @@
 
 <head>
   <?php
-  	$siteurlc = $_SERVER['HTTP_HOST'];
-  	$panelurlc = file_get_contents("http://$siteurlc/setup/setup1/setup2/panelurl.txt");
-    //the c variables mean check, it's just so i can check to make sure the URL is valid and not modified!
-  	$checkvarid = htmlspecialchars($_GET['uid']);
-	$checkvaramount = htmlspecialchars($_GET['amount']);
-  	$checkvaramount = $checkvaramount - 1;
-  
-  	if ($checkvarid > 0) {
-    	$checkvarid = $checkvarid;
-  	} else {
-    	header("Location: $panelurlc/billing/balance");
-    }
-
-	if ($checkvaramount >= 1) {
-    	$checkvaramount = $checkvaramount;
-  	} else {
-    	header("Location: $panelurlc/billing/balance");
-    }
-  ?>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <?php
   $siteurl = $_SERVER['HTTP_HOST'];
   
   $siteurlcurl = "http://$siteurl/setup/setup1/sitename.txt";
   
+  $panelurlcurl = "http://$siteurl/setup/setup1/setup2/panelurl.txt";
+  
+  $homeurlcurl = "http://$siteurl/setup/setup1/setup2/setup3/setup4/panelurl.txt";
+  
+  $paypaltokencurl = "http://$siteurl/setup/setup1/setup2/setup3/paypaltoken.txt";
+  
+  $sitenamecurl = "http://$siteurl/setup/setup1/sitename.txt";
+  
   $ci = curl_init();
-  curl_setopt($ci, CURLOPT_URL, $siteurlcurl);
+  curl_setopt($ci, CURLOPT_URL, $sitenamecurl);
   curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
-  $cont = curl_exec($ci);
+  $sitename = curl_exec($ci);
   curl_close($ci);
   
-  echo $cont;
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $panelurlcurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $panelurl = curl_exec($ci);
+  curl_close($ci);
   
-  $sitename = $cont;
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $homeurlcurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $homeurl = curl_exec($ci);
+  curl_close($ci);
   
-  //$sitename = file_get_contents("http://$siteurl/setup/setup1/sitename.txt");
-  
-  $panelurl = file_get_contents("http://$siteurl/setup/setup1/setup2/panelurl.txt");
-  
-  $homeurl = file_get_contents("http://$siteurl/setup/setup1/setup2/setup3/setup4/panelurl.txt");
-  
-  $paypaltoken = file_get_contents("http://$siteurl/setup/setup1/setup2/setup3/paypaltoken.txt");
+  $ci = curl_init();
+  curl_setopt($ci, CURLOPT_URL, $paypaltokencurl);
+  curl_setopt($ci, CURLOPT_RETURNTRANSFER, 1);
+  $paypaltoken = curl_exec($ci);
+  curl_close($ci);
   
   if (isset($sitename)) {
     $sitename = $sitename;
@@ -78,6 +62,33 @@
   } else {
     $panelurl = "RUN INSTALLATION!";
   }
+  ?>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <?php
+  	$checkvarid = htmlspecialchars($_GET['uid']);
+	$checkvaramount = htmlspecialchars($_GET['amount']);
+  	$checkvaramount = $checkvaramount - 1;
+  
+  	if ($checkvarid > 0) {
+    	$checkvarid = $checkvarid;
+  	} else {
+    	header("Location: $panelurlc/billing/balance");
+    }
+
+	if ($checkvaramount >= 1) {
+    	$checkvaramount = $checkvaramount;
+  	} else {
+    	header("Location: $panelurlc/billing/balance");
+    }
   ?>
   <title><?php echo $sitename; ?> - Purchase</title>
 
