@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  
+  <?php
+  $siteurl = $_SERVER['HTTP_HOST'];
+  ?>
   <body>
     
   </body>
@@ -48,5 +50,5 @@ function remove_line($file, $remove) {
   
   
 <?php
-header("Location: https://nexussociety.net/payment-test/confirm.php?amountpaid=$amount&userid=$uid");
+header("Location: $siteurl/payment-test/confirm.php?amountpaid=$amount&userid=$uid");
 ?>
