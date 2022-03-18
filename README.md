@@ -22,3 +22,5 @@ This is just an addon for some people having some issues!
 Purchase the main resource: https://pterodactyl-resources.com/resources/resource/13-billing-module-pterodacyl-17x--all-in-one-billing-system-/
 
 The file in IMPORTANT/PayPal.php was created & coded by mubeen!
+
+The first time you run the webpage, it may be a tad slow while it finds all the files! It won't happen after that though don't worry!
