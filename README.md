@@ -43,3 +43,5 @@ Purchase the main resource: https://pterodactyl-resources.com/resources/resource
 The file in IMPORTANT/PayPal.php was created & coded by mubeen!
 
 The first time you run the webpage, it may be a tad slow while it finds all the files! It won't happen after that though don't worry!
+
+*I don't recommend the check balance at all it's just mostly so you can learn to turn a email into a user Id and then check their account balance but the CSS & JS is outdated and it's not got the proper images. In the future I may change this idk*
