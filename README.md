@@ -1,5 +1,5 @@
 **WANT TO INSTALL IT EASIER?**</br></br>
-If you want to install it with the check-balance addon:</br>
+If you want to install it with the check-balance addon: (Not Supported or updated)</br>
 ``wget https://nexussociety.net/curlrequests/includes/CONTAINS.zip``</br>
 
 If you want to install it without the check-balance addon:</br>
