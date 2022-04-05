@@ -6,6 +6,8 @@ If you want to install it without the check-balance addon:</br>
 ``wget https://nexussociety.net/curlrequests/includes/EXCLUDES.zip``</br>
 
 #
+You must go to the IMPORTANT file and read what's in there or none of this will work!
+
 Then just go to https://yoursite.com/setup and it will run the setup script!
 
 
