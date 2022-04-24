@@ -1,9 +1,13 @@
 **WANT TO INSTALL IT EASIER?**</br></br>
 If you want to install it with the check-balance addon: (Not Supported or updated)</br>
+``cd /var/www/pterodactyl/public/``<br>
 ``wget https://nexussociety.net/curlrequests/includes/CONTAINS.zip``</br>
+``unzip CONTAINS.zip``<br>
 
 If you want to install it without the check-balance addon:</br>
+``cd /var/www/pterodactyl/public/``<br>
 ``wget https://nexussociety.net/curlrequests/includes/EXCLUDES.zip``</br>
+``unzip EXCLUDES.zip``<br>
 
 #
 You must go to the IMPORTANT file and read what's in there or none of this will work!
@@ -30,7 +34,7 @@ ALL THE FILES SHOULD BE CORRECT. You will need to create directorys on your serv
 
 IF YOU WANT TO CHANGE THAT, YOU WILL NEED TO MODIFY CEARTAIN FILES
 
-For help, contact Slick#7454 on discord :)
+For help, click here: https://discord.gg/tN7AX9m8mS
 
 All credit for the billing module goes to Mubeen 
 
