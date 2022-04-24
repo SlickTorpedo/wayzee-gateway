@@ -1,3 +1,5 @@
+**NOTE, THIS REQUIRES A PAYPAL BUISNESS ACCOUNT TO WORK!**
+
 **WANT TO INSTALL IT EASIER?**</br></br>
 If you want to install it with the check-balance addon: (Not Supported or updated)</br>
 ``cd /var/www/pterodactyl/public/``<br>
