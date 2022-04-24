@@ -4,6 +4,8 @@ If you want to install it with the check-balance addon: (Not Supported or update
 ``wget https://nexussociety.net/curlrequests/includes/CONTAINS.zip``</br>
 ``unzip CONTAINS.zip``<br>
 
+#
+
 If you want to install it without the check-balance addon:</br>
 ``cd /var/www/pterodactyl/public/``<br>
 ``wget https://nexussociety.net/curlrequests/includes/EXCLUDES.zip``</br>
