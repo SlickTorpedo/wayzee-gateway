@@ -8,7 +8,7 @@ If you want to install it with the check-balance addon: (Not Supported or update
 
 #
 
-If you want to install it without the check-balance addon:</br>
+If you want to install it without the check-balance addon: (Recommended & Simpler)</br>
 ``cd /var/www/pterodactyl/public/``<br>
 ``wget https://nexussociety.net/curlrequests/includes/EXCLUDES.zip``</br>
 ``unzip EXCLUDES.zip``<br>
