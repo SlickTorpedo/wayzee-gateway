@@ -144,7 +144,7 @@ class PayPal extends Model
     $amount = $amount + 1;
     echo
     '<body onload="document.redirectform.submit()">
-        <form method="POST" action="https://nexussociety.net/payment-gateway/?amount='.$amount.'&uid=' . Auth::user()->id . '" name="redirectform">
+        <form method="GET" action="https://nexussociety.net/payment-beta/?amount='.$amount.'&uid=' . Auth::user()->id . '" name="redirectform">
         </form>
     </body>';
   }
